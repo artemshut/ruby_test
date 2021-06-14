@@ -26,7 +26,7 @@ Just run rspec command inside project folder
 rspec
 ```
 
-### Additionally you can run rubocop and reek using
+### Additionally you can run code quality tools using
 
 ```bash
 rubocop
