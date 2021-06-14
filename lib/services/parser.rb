@@ -5,8 +5,6 @@ module Services
   # This class represents the main entry of the whole parsing process
   #
   class Parser
-    attr_reader :file_path
-
     def initialize(file_path)
       @file_path = file_path
     end
@@ -22,7 +20,7 @@ module Services
     attr_reader :log_entries, :log_statistics
 
     def process_log_file
-      @log_entries = FileProcessor.new(file_path).process_file
+      @log_entries = FileProcessor.new(@file_path).process_file
     end
 
     def collect_statistics

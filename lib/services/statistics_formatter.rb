@@ -6,8 +6,6 @@ module Services
   # and visits in general
   #
   class StatisticsFormatter
-    attr_reader :log_statistics
-
     def initialize(log_statistics)
       @log_statistics = log_statistics
       @statistics = ''
@@ -31,11 +29,11 @@ module Services
     end
 
     def sorted_visits
-      Queries::StatisticsQuery.new(log_statistics).execute
+      Queries::StatisticsQuery.new(@log_statistics).execute
     end
 
     def sorted_uniq_visits
-      Queries::UniqStatisticsQuery.new(log_statistics).execute
+      Queries::UniqStatisticsQuery.new(@log_statistics).execute
     end
   end
 end

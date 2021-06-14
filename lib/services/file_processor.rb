@@ -6,8 +6,6 @@ module Services
   # and log entries structure
   #
   class FileProcessor
-    attr_reader :file_path
-
     def initialize(file_path)
       @file_path = file_path
       @log_entries = []
@@ -21,11 +19,11 @@ module Services
     private
 
     def validate_file
-      Validators::FileValidator.new(file_path).validate
+      Validators::FileValidator.new(@file_path).validate
     end
 
     def store_log_entries
-      File.foreach(file_path) do |line|
+      File.foreach(@file_path) do |line|
         log_entry_url, log_entry_ip_address = line.split(' ')
         @log_entries << Entities::LogEntry.new(log_entry_url, log_entry_ip_address)
       end
