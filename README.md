@@ -47,3 +47,4 @@ The main points of used approach are:
 - More testing
 - Rspec file includes improvements
 - Improve how displaying information works
+- Add CI check
