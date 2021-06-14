@@ -17,18 +17,16 @@ module Services
 
     private
 
-    attr_reader :log_entries, :log_statistics
-
     def process_log_file
       @log_entries = FileProcessor.new(@file_path).process_file
     end
 
     def collect_statistics
-      @log_statistics = StatisticsCollector.new(log_entries).collect
+      @log_statistics = StatisticsCollector.new(@log_entries).collect
     end
 
     def display_formatted_statistics
-      StatisticsFormatter.new(log_statistics).display_formatted_statistics
+      StatisticsFormatter.new(@log_statistics).display_formatted_statistics
     end
   end
 end
