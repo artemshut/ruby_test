@@ -15,8 +15,14 @@ bundle install
 
 Inside project folder run
 
+First add some permissions to script file
 ```bash
-ruby lib/parser.rb path_to_log_file
+chmod a+x bin/process_file
+```
+
+Then run the script itself
+```bash
+bin/process_file path_to_log_file
 ```
 
 ## How to run specs
