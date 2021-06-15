@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
 require 'services/statistics_collector'
-require 'entities/log_entry'
-require 'entities/page_statistics'
 
 describe Services::StatisticsCollector do
   subject(:collector) { described_class.new(log_entries) }

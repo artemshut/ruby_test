@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+
+# frozen_string_literal: true
+
+require 'require_all'
+require_all 'lib'
+
+Parser.new(
+  log_storage: Services::FileProcessor.new(ARGV[0]),
+  statistics_storage: Services::StatisticsCollector,
+  output: Services::StatisticsFormatter
+).parse
