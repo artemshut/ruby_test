@@ -49,8 +49,8 @@ The main points of used approach are:
 ## Possible improvements
 
 - Error handling
-- Think of another entry point to run the program, not internal file from lib
 - More testing
 - Rspec file includes improvements
-- Improve how displaying information works
+- ~~Think of another entry point to run the program, not internal file from lib~~
+- ~~Improve how displaying information works~~
 - Add CI check
