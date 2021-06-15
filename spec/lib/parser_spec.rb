@@ -28,28 +28,8 @@ describe Parser do
     allow(output).to receive(:show_statistics)
   end
 
-  it 'blabla' do
+  it 'successfully calls displaying of statistics' do
     expect(output).to receive(:show_statistics).and_return(output_text)
     parser.parse
   end
-
-  # context 'when file is valid' do
-  #   let(:file_path) { 'spec/fixtures/webserver.log' }
-  #
-  #   it 'returns string value after all' do
-  #     expect(parser.parse_file).to be_instance_of(String)
-  #   end
-  #
-  #   it 'returns correct LogEntry fields' do
-  #     expect(parser.parse_file).to include('/help_page/1 80 visits')
-  #   end
-  # end
-  #
-  # context 'when file is invalid' do
-  #   let(:file_path) { 'spec/fixtures/webserve.log' }
-  #
-  #   it 'raises an error' do
-  #     expect { parser.parse_file }.to raise_error(Validators::FilePresenceError)
-  #   end
-  # end
 end
