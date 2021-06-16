@@ -13,8 +13,8 @@ describe Services::StatisticsFormatter do
   end
 
   let(:output_text) do
-    "##### Webpages with most page views #####\n/contact 6 visits \n/about 2 visits \n" \
-    "##### Webpages with most unique page views ######\n/contact 5 uniq visits \n/about 1 uniq visits \n"
+    "##### Webpages with most page views #####\n/contact 6 visits\n/about 2 visits\n" \
+    "##### Webpages with most unique page views ######\n/contact 5 uniq visits\n/about 1 uniq visits\n"
   end
 
   it 'returns correct response to user' do

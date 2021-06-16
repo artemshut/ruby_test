@@ -21,12 +21,12 @@ module Services
 
     def show_visits_statistics
       puts '##### Webpages with most page views #####'
-      sorted_visits.each { |stat| puts "#{stat.url} #{stat.visits} visits \n" }
+      sorted_visits.each { |stat| puts "#{stat.url} #{stat.visits} visits" }
     end
 
     def show_uniq_visits_statistics
       puts '##### Webpages with most unique page views ######'
-      sorted_uniq_visits.each { |uniq_stat| puts "#{uniq_stat.url} #{uniq_stat.uniq_visits} uniq visits \n" }
+      sorted_uniq_visits.each { |uniq_stat| puts "#{uniq_stat.url} #{uniq_stat.uniq_visits} uniq visits" }
     end
 
     def sorted_visits
