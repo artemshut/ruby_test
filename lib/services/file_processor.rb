@@ -25,7 +25,8 @@ module Services
     end
 
     def store_log_entries
-      File.foreach(file_path) do |line|
+      file = File.foreach(file_path)
+      file.each_entry do |line|
         log_entry_url, log_entry_ip_address = line.split(' ')
         log_entries << Entities::LogEntry.new(log_entry_url, log_entry_ip_address)
       end
